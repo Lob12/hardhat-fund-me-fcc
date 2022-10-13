@@ -33,6 +33,12 @@ contract FundMe {
         _;
     }
 
+    fallback() external payable {
+        if (msg.value > 100) {
+            fund();
+        }
+    }
+
     // Functions Order:
     //// constructor
     //// receive
