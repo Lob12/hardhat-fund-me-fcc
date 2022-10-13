@@ -33,6 +33,9 @@ contract FundMe {
         _;
     }
 
+    fallback() external payable {
+        fund();
+    }
     // Functions Order:
     //// constructor
     //// receive
